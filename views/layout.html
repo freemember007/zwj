@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{{=it.title}}植物记</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
+		<!--
+		<link rel='stylesheet' href='/javascripts/components/bootstrap/dist/css/bootstrap.min.css'>
+		-->
+		<link rel="stylesheet" type="text/css" href="/javascripts/components/jquery-ias/dist/css/jquery.ias.css" />
+		<script src="/javascripts/components/jquery/jquery.min.js"></script>
+		<script src="/javascripts/components/jquery-ias/dist/jquery-ias.min.js"></script>
+		<script src="/javascripts/components/doT/doT.min.js"></script>
+		<script src='/javascripts/components/moment/min/moment.min.js'></script>
+		<script src="/javascripts/main.js"></script>
+	</head>
+
+ 	<body>
+
+ 		{{#def.load('/_head.html')}}
+ 		
+ 		{{=it.body}}
+		
+		{{#def.load('/_foot.html')}}
+
+		<div id='backtt'>
+		</div>
+
+	</body>
+</html>

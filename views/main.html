@@ -1,0 +1,40 @@
+<div id="container">
+
+	{{~it.data :value:index}}
+		<div class='item'>
+
+			<!--******************** 略缩图 ***********************-->
+
+			<a href='/detail/{{=value._id}}' target='_blank' class='thumbLink'>
+				<img width='200' src='{{=value.image_url}}' class='img-polaroid' _id='{{=value._id}}' alt='{{=value.keyword}}' />
+			</a>
+
+			<!--******************** 描述区块 ***********************-->
+
+			<div id="itemDesc">
+				<!-- 商品标题 -->
+				<a class='itemTitle' target='_blank' href='{{=value.blink}}'>{{=value.text}}</a>
+				<br/>
+
+				<!-- 价格信息 -->
+				<div id="itemBottom">
+					<span class='itemPrice'>{{=value.keyword}}</span>
+					<a target="_blank" style='color:#fff' href="{{=value.blink}}" class='buttonS' id='buyButton' >转发</a>
+				</div>
+				
+				<!-- 按钮区 -->
+				<div id="itemButtonArea">
+					<a class='itemSite' target='_blank' href='http://weibo.com/{{=value.profile_url}}'>{{=value.moment}} 来自{{=value.site_id}}</a>
+				</div>
+				
+			</div>
+			
+		</div>
+	{{~}}
+
+	<div id="navigation">
+		<a href='{{=it.nextURL}}'>next</a>
+	</div>
+
+</div>
+
