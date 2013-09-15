@@ -51,15 +51,14 @@ function fetch(group) {
 						}, function(result){
 							if (result !== undefined) {
 								var item = new Item();
+								item.user.author = tweet.user.name;
+								item.user.avatar = tweet.user.profile_image_url;
+								item.user.profile_url = tweet.user.profile_url;
 								item.text = tweet.text;
 								item.keyword = result;
 								item.image_url = tweet.bmiddle_pic;
-								item.author = tweet.user.name;
-								item.profile_url = tweet.user.profile_url;
 								item.created_at = tweet.created_at;
 								item.weibo_id = tweet.mid;
-								item.source = "weibo";
-								item.site_id = tweet.user.name;
 								item.save(function(err) {
 									//return console.log(err);
 								});

@@ -6,7 +6,7 @@
 			<!--******************** 略缩图 ***********************-->
 
 			<a href='/detail/{{=value._id}}' target='_blank' class='thumbLink'>
-				<img width='200' src='{{=value.image_url}}' class='img-polaroid' _id='{{=value._id}}' alt='{{=value.keyword}}' />
+				<img src='{{=value.image_url}}' class='img-polaroid' _id='{{=value._id}}' alt='{{=value.keyword}}' />
 			</a>
 
 			<!--******************** 描述区块 ***********************-->
@@ -24,7 +24,8 @@
 				
 				<!-- 按钮区 -->
 				<div id="itemButtonArea">
-					<a class='itemSite' target='_blank' href='http://weibo.com/{{=value.profile_url}}'>{{=value.moment}} 来自{{=value.site_id}}</a>
+					<a class='itemSite' target='_blank' href='http://weibo.com/{{=value.profile_url}}'>{{=value.moment}} 来自{{=value.user.author}}</a>
+					<img width="24px" src="{{=value.user.avatar}}" alt="avatar">
 				</div>
 				
 			</div>

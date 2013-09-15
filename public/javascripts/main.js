@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	//瀑布布局
+	// var container = document.querySelector('#container');
+	// var msnry = new Masonry(container, {
+	// 	itemSelector: '.item',
+	// 	columnWidth: 220
+	// });
+
+	var $container = $('#container');
+	$container.imagesLoaded(function() {
+		$container.isotope({
+			itemSelector: '.item'
+		});
+	});
+
 	// 无限翻页
 	jQuery.ias({
 		container: '#container',
